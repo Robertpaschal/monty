@@ -1,4 +1,5 @@
 #include "monty.h"
+int _getline(char **lineptr, size_t *n, FILE *stream);
 /**
  * _getline - mimicks the standard libary getline function
  * @lineptr: where the buffer is stored
