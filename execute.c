@@ -33,6 +33,8 @@ void execute_command(char *line, unsigned int line_number, stack_t **stack)
 		sub(stack, line_number);
 	else if (strcmp(opcode, "div") == 0)
 		div_op(stack, line_number);
+	else if (strcmp(opcode, "mul") == 0)
+		mul(stack, line_number);
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
