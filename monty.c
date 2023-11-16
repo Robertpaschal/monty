@@ -42,6 +42,11 @@ int main(int argc, char *argv[])
 	while ((read = _getline(&line, &len, file)) != -1)
 	{
 		line_number++;
+
+		if (line[0] == '#')
+		{
+			continue;
+		}
 		execute_command(line, line_number, &stack);
 	}
 
