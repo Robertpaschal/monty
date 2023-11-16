@@ -15,10 +15,12 @@ void execute_command(char *line, unsigned int line_number, stack_t **stack)
 	if (!opcode)
 		return;
 
-	if (strcmp(opcode, "push") == 0)
+	if (strcmp(opcode, "push ") == 0)
 		push(stack, line_number);
 	else if (strcmp(opcode, "pall") == 0)
 		pall(stack, line_number);
+	else if (strcmp(opcode, "pint") == 0)
+		pint(stack, line_number);
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
