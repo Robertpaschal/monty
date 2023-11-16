@@ -8,8 +8,6 @@
 
 #include "monty.h"
 
-stack_t *stack = NULL;
-
 /**
  * main - the main file for the opcodes
  * @argc: argument counter
@@ -23,6 +21,7 @@ int main(int argc, char *argv[])
 	size_t len = 0;
 	int read;
 	unsigned int line_number = 0;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
