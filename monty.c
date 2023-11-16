@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	size_t len = 0;
 	int read;
 	unsigned int line_number = 0;
-	stack_t *stack = NULL;
+	stack_t *stack;
 
 	if (argc != 2)
 	{
@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 	       exit(EXIT_FAILURE);
 	}
+
+	stack = NULL;
 
 	while ((read = _getline(&line, &len, file)) != -1)
 	{
