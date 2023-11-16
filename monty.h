@@ -48,6 +48,7 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
+void div_op(stack_t **stack, unsigned int line_number);
 void execute_command(char *line, unsigned int line_number, stack_t **stack);
 int _getline(char **lineptr, size_t *n, FILE *stream);
 
