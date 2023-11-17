@@ -40,7 +40,7 @@ int _getline(char **lineptr, size_t *n, FILE *stream)
 
 		if (length == *n - 1)
 		{
-			new_size = *n *2;
+			new_size = *n * 2;
 			temp = (char *)malloc(new_size);
 			if (temp == NULL)
 			{
@@ -53,7 +53,7 @@ int _getline(char **lineptr, size_t *n, FILE *stream)
 			*lineptr = temp;
 			*n = new_size;
 		}
-		
+
 		(*lineptr)[length] = (char)c;
 		length++;
 	}
