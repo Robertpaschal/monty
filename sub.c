@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * sunb - Subtracts the top element of the stack from the second top element
+ * sub - Subtracts the top element of the stack from the second top element
  * @stack: pointer to the top of the stack
  * @line_number: Line number in the script
  */

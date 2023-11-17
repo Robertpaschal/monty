@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * stack - Sets the format of the data to a stack (LIFO)
+ * stack_operation - Sets the format of the data to a stack (LIFO)
  * @stack: Pointer to the top of the stack
  * @line_number: Line number in the script
  */

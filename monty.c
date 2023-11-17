@@ -7,6 +7,7 @@
 #endif
 
 #include "monty.h"
+int main(int argc, char *argv[]);
 
 /**
  * main - the main file for the opcodes
@@ -51,7 +52,6 @@ int main(int argc, char *argv[])
 	}
 
 	fclose(file);
-	free(line);
 
 	while (stack != NULL)
 	{

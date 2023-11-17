@@ -4,7 +4,7 @@
  * @stack: Pointer to the top of the stack
  * @line_number: Line number in the script
  */
-void mul(stack_t ** stack, unsigned int line_number)
+void mul(stack_t **stack, unsigned int line_number)
 {
 	if (!stack || !*stack || !(*stack)->next)
 	{

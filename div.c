@@ -2,9 +2,9 @@
 /**
  * div_op - Divides the second top element of the stack by the top element
  * @stack: pointer to the top of the stack
- * @line_number
+ * @line_number: the line in the stack
  */
-void div_op(stack_t ** stack, unsigned int line_number)
+void div_op(stack_t **stack, unsigned int line_number)
 {
 	if (!stack || !*stack || !(*stack)->next)
 	{

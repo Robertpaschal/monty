@@ -1,4 +1,6 @@
 #include "monty.h"
+#define BUFFER_SIZE 12
+
 int _getline(char **lineptr, size_t *n, FILE *stream);
 /**
  * _getline - mimicks the standard libary getline function
@@ -14,6 +16,7 @@ int _getline(char **lineptr, size_t *n, FILE *stream)
 	size_t length = 0;
 	int c;
 	char *temp;
+	size_t new_size;
 
 
 	if (*lineptr == NULL)
@@ -35,20 +38,24 @@ int _getline(char **lineptr, size_t *n, FILE *stream)
 			break;
 		}
 
-		(*lineptr)[length] = (char)c;
-		length++;
-
 		if (length == *n - 1)
 		{
-			*n *= 2;
-			temp = (char *)realloc(*lineptr, *n);
-		if (temp == NULL)
-		{
+			new_size = *n *2;
+			temp = (char *)malloc(new_size);
+			if (temp == NULL)
+			{
+				free(*lineptr);
+				return (-1);
+			}
+
+			memcpy(temp, *lineptr, length);
 			free(*lineptr);
-			return (-1);
+			*lineptr = temp;
+			*n = new_size;
 		}
-		*lineptr = temp;
-		}
+		
+		(*lineptr)[length] = (char)c;
+		length++;
 	}
 
 	if (length == 0 && c == EOF)
@@ -60,4 +67,3 @@ int _getline(char **lineptr, size_t *n, FILE *stream)
 	(*lineptr)[length] = '\0';
 	return (length);
 }
-

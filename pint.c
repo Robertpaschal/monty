@@ -4,7 +4,7 @@
  * @stack: pointer to the top of the stack
  * @line_number: line number in the script
  */
-void pint(stack_t ** stack, unsigned int line_number)
+void pint(stack_t **stack, unsigned int line_number)
 {
 	if (!stack || !*stack)
 	{
